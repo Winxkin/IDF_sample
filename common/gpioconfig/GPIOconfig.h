@@ -15,6 +15,7 @@ typedef void (*input_callback_t) (int);
 void input_io_create(gpio_num_t gpio_num, interrupt_type_edle_t type);
 void input_io_get_level(gpio_num_t gpio_num);
 void input_set_callback(void * cb);
-
+void output_io_creat(gpio_num_t gpio_num);
+void output_io_toggle (gpio_num_t gpio_num);
 
 #endif

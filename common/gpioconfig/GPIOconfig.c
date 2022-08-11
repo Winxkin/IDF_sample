@@ -28,3 +28,19 @@ void input_set_callback(void * cb)
 {
     input_callback = cb;
 }
+
+void output_io_creat(gpio_num_t gpio_num)
+{
+    gpio_pad_select_gpio(gpio_num);
+    gpio_set_direction(gpio_num, GPIO_MODE_OUTPUT);
+}
+
+void output_io_toggle (gpio_num_t gpio_num)
+{   
+    gpio_set_level(gpio_num,1);
+    ets_delay_us (1000);
+    gpio_set_level(gpio_num,0);
+    ets_delay_us (1000);
+}
+
+
