@@ -1,5 +1,5 @@
 set(app_src GPIOconfig.c)
 set(pri_req)
-idf_component_register(SRCS $(app_src)
+idf_component_register(SRCS ${app_src}
                     INCLUDE_DIRS "."
-                    REQUIRES $(pri_req))
+                    REQUIRES ${pri_req})
